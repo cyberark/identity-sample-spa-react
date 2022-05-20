@@ -1,4 +1,5 @@
 @import url('~bootstrap/dist/css/bootstrap.min.css');
+@import url('../node_modules/@yaireo/tagify/dist/tagify.css');
 
 * {
   margin: 0;
@@ -25,6 +26,57 @@ body {
   overflow-x: hidden;
   background: #F2F2F2;
   border-radius: 45px;
+}
+
+.customTagStyle{
+  /* --tag-bg                  : #fff; */
+  --tag-hover               : #fffeff;
+  --tag-text-color          : #000;
+  --tags-border-color       : silver;
+  --tag-text-color--edit    : #111;
+  --tags-focus-border-color : rgba(0,0,0,.03);
+  --tag-remove-btn-bg--hover: #000;
+  --tag-remove-bg           : #fff;
+  --tag-min-width           : inherit;
+  --tag-max-width           : inherit;
+  background                : #fff;
+  border                    : initial;
+  padding                   : 6px;
+  overflow-wrap             : anywhere;
+}
+.customTagStyle span{
+  color: #000;
+}
+
+.loader {
+  position: fixed;
+  top: 40%;
+  left: 45%;
+  height: 128px !important;
+  width: 128px !important;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+}
+
+.loader-screen {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #000;
+  opacity: .4;
+  z-index: 1499;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
 }
 
 /* application specific common CSS */

@@ -2,11 +2,22 @@ import { useNavigate } from 'react-router-dom';
 import githubLogo from '../assets/images/github_logo.png';
 import cyberarkLogo from '../assets/images/cyberark_logo.png';
 import swaggerLogo from '../assets/images/swagger_logo.png';
+import acmeLogo from '../assets/images/acmelogo.png';
+import { useEffect, useState } from 'react';
+import { getStorage } from '../utils';
 
 function Intro() {
     const navigate = useNavigate();
-    const applogo = '';
+    const [applogo, setAppLogo] = useState(acmeLogo);
     const onGetStarted = () => navigate('/home');
+
+    useEffect(() => {
+        const settingsStr = getStorage('settings');
+        if(settingsStr !== null) {
+            const settingsJsonObj = JSON.parse(settingsStr);
+            setAppLogo(settingsJsonObj.appImage);
+        }
+    },[])
 
     return (
         <div className="container-fluid p-3">

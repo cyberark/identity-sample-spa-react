@@ -1,7 +1,25 @@
 import AppHeader from '../components/AppHeader';
 import AppError from '../components/AppError';
+import { useEffect } from 'react';
+import { getStorage, loadWidgetJsAndCss } from '../utils';
 
 function Widget() {
+
+    useEffect(() => {
+        const settings = getStorage('settings');
+        if(settings !== null) {
+            const settingsJsonObj = JSON.parse(settings);
+            loadWidgetJsAndCss(settingsJsonObj, () => {
+                window.LaunchLoginView({
+                    "containerSelector": "#cyberark-login",
+                    "showSignup": true,
+                    "signUpLinkText": "Sign Up",
+                    "apiFqdn": settingsJsonObj.tenantUrl.split("/")[2],
+                    "widgetId": settingsJsonObj.loginWidgetId
+                })
+            });
+        }
+    }, [])
 
     const onRetry = () => {}
 
@@ -27,7 +45,7 @@ function Widget() {
                                 </h5>
                             </div>
                         </div>
-                        <div className="col m-5" id="cyberark-login"></div>
+                        <div className="col m-5" id="cyberark-login" style={{lineHeight: 1}}></div>
                     </div>
                 </div>
                 <AppError btnClick={onRetry} body="Oops, Something went wrong. Verify App configuration and user permissions." />
