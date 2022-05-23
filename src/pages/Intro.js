@@ -1,3 +1,19 @@
+/*
+* Copyright (c) 2022 CyberArk Software Ltd. All rights reserved.
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
 import { useNavigate } from 'react-router-dom';
 import githubLogo from '../assets/images/github_logo.png';
 import cyberarkLogo from '../assets/images/cyberark_logo.png';
@@ -41,7 +57,7 @@ function Intro() {
                                     </div>
                                 </div>
                                 <div className="text-center p-3">
-                                    <a className="btn btn-link" target="_blank" rel="noreferrer" href="https://github.com/cyberark/identity-demo-angular">Know More</a>
+                                    <a className="btn btn-link" target="_blank" rel="noopener noreferrer" href="https://github.com/cyberark/identity-demo-angular">Know More</a>
                                 </div>
                         </div>
                         <div className="card">
@@ -58,7 +74,7 @@ function Intro() {
                                     </div>
                                 </div>
                                 <div className="text-center p-3">
-                                    <a className="btn btn-link" target="_blank" rel="noreferrer" href="https://www.cyberark.com/resources/cyberark-identity">Know More</a>
+                                    <a className="btn btn-link" target="_blank" rel="noopener noreferrer" href="https://www.cyberark.com/resources/cyberark-identity">Know More</a>
                                 </div>
                         </div>
                         <div className="card">
@@ -75,7 +91,7 @@ function Intro() {
                                     </div>
                                 </div>
                                 <div className="text-center p-3">
-                                    <a className="btn btn-link" target="_blank" rel="noreferrer" href="https://identity-developer.cyberark.com/">Know More</a>
+                                    <a className="btn btn-link" target="_blank" rel="noopener noreferrer" href="https://identity-developer.cyberark.com/">Know More</a>
                                 </div>
                         </div>
                     </div>
