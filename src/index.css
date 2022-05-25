@@ -1,5 +1,6 @@
 @import url('~bootstrap/dist/css/bootstrap.min.css');
 @import url('../node_modules/@yaireo/tagify/dist/tagify.css');
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');
 
 * {
   margin: 0;
@@ -77,6 +78,15 @@ body {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
+}
+
+/* copy button */
+.myDIV:hover + .hide, .hide:hover {
+  display: inline-block;
+}
+
+.horizontalDiv {
+  float: left;
 }
 
 /* application specific common CSS */

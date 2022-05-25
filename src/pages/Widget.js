@@ -12,7 +12,7 @@ function Widget() {
             loadWidgetJsAndCss(settingsJsonObj, () => {
                 window.LaunchLoginView({
                     "containerSelector": "#cyberark-login",
-                    "showSignup": true,
+                    "showSignup": false,
                     "signUpLinkText": "Sign Up",
                     "apiFqdn": settingsJsonObj.tenantUrl.split("/")[2],
                     "widgetId": settingsJsonObj.loginWidgetId

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import acmeLogo from '../assets/images/acmelogo.png';
 import { getStorage } from "../utils";
 
-function AppHeader({ isHomeVisible = false, isSettingsVisible = false }) {
+function AppHeader({ isHomeVisible = false, isSettingsVisible = false, isUserInfoVisible = false }) {
     const navigate = useNavigate();
     const [appLogo, setAppLogo] = useState(acmeLogo);
 
@@ -38,6 +38,11 @@ function AppHeader({ isHomeVisible = false, isSettingsVisible = false }) {
                         {isSettingsVisible && <li className="nav-item">
                             <a className="nav-link text-white" onClick={() => onTabClick('/settings')}>
                                 Settings
+                            </a>
+                        </li>}
+                        {isUserInfoVisible && <li className="nav-item">
+                            <a className="nav-link text-white" onClick={() => onTabClick('/userinfo')}>
+                                UserInfo
                             </a>
                         </li>}
                     </ul>

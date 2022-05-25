@@ -1,3 +1,6 @@
+export const OIDC_DEFAULT_SCOPE = ['openid', 'email', 'profile', 'address', 'phone'];
+export const redirectOIDCAPI = "http://localhost:3000/RedirectResource";
+
 export const setStorage = (key, value) => {
     localStorage.setItem(key, btoa(value));
 }
