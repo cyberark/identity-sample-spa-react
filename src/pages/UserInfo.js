@@ -37,7 +37,7 @@ function UserInfo() {
 
     return (
         <div className="container-fluid">
-            <AppHeader isHomeVisible={true} isUserInfoVisible={true}/>
+            <AppHeader isHomeVisible={true} isUserInfoVisible={true} isLogoutVisible={true}/>
             <div className="app-page">
                 <div className="container py-3">
                     <div className="card-deck">
